@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>fullpage01</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+		});
+	</script>
+	<style>
+		nav#navTop{
+			position: fixed;z-index:1;width:100%;
+			background-color: #343436;padding-left:300px; float: left;
+		}
+		nav#navTop ul#topMenu li:first-child{margin-right: 20px;}
+		/*nav#navTop ul#topMenu{width: 900px;background-color: red;}*/
+		nav#navTop ul#topMenu li{float: left; padding-right: 30px;}
+		/*nav#navTop ul#topMenu li:nth-child(2){padding-left: 130px;}*/
+		nav#navTop ul#topMenu li img{display: block; text-align: center; padding: 27px 0;}
+		nav#navTop ul#topMenu li a{
+			display: block;line-height:100px;text-align: center;padding: 0 10px;
+			color:white; font-weight: bold;
+		}
+		.right{float: left;padding-left: 200px;}	
+	
+	
+	</style>
+</head>
+<body>
+	<nav id="navTop">
+		<ul id="topMenu" class="clearfix">
+			<li><a href="index.html">
+				<img src="images01/logo.png" alt=""></a></li>
+			<li data-menuanchor="1st"><a href="#1st">BRAND</a></li>
+			<li data-menuanchor="2st"><a href="#2st">MENU</a></li>
+			<li data-menuanchor="3st"><a href="#3st">MEMBERSHIP</a></li>
+			<li data-menuanchor="4st"><a href="#4st">EVENT</a></li>
+			<li data-menuanchor="5st"><a href="#5st">STORE</a></li>
+		
+	<div class="right">
+		<ul class="clearfix">
+			<li data-menuanchor="1st"><a href="#1st">고객의소리</a></li>
+			<li data-menuanchor="2st"><a href="#2st">로그인</a></li>
+			<li data-menuanchor="3st"><a href="#3st">회원가입</a></li>
+		</ul>
+	</div>
+	</ul>
+	</nav>
+</body>
+</html>
