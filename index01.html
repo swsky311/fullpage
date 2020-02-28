@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<title>fullpage</title>
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/fullpage.css">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
@@ -59,10 +58,26 @@
 		});
 	</script>
 	<style>
+		.menuWrap{width: 1200px; margin: 0 auto; _background-color: #f00;}	
 		nav#navTop{
-			position: fixed;z-index:1;width:100%;
-			background-color: #cdcdcd;padding-left:10px;
+			position: fixed;z-index:1;width:100%;height: 100px;
+			background-color: #343436;
 		}
+		#logo{width: 118px;height: 44px; float: left; margin-right: 50px; margin-top: 27px;}
+		.mi{width: 400px;height: 100px;background-color:green; float: left; margin-right: 100px; 
+			color:#fff; font-weight: bold}
+		.right01{width: 500px;height: 100px;background-color: #ff0; float: left;}
+		.right01 .one, 
+		.right01 .two{float: left; margin-top: 40px;}
+
+		.right01 .one{margin-right: 30px; margin-left: 150px;}
+		.right01 .two{width: 100px;height: 30px; line-height: 30px;background-color: #f0f;
+						text-align: center;
+		}
+
+		/*#logo{width: 135px;height: 50px;position: absolute;left: 300px;_top: 25px;_background-color: #f00;}
+		#logo img{display: block; margin: 0 auto;}*/
+		#topMenu{width: 300px;height:100px;margin: 0 auto;}
 		nav#navTop li{float: left;}
 		nav#navTop li a{display: block;line-height:100px;text-align: center;padding: 0 10px;}
 		#page1{background-image: url(images/bg1.jpg);}
@@ -116,26 +131,40 @@
 </head>
 <body>
 	<nav id="navTop">
-		<div id="logo">
-			<img src="images01/logo.png" alt=""><a href=""></a>
-		<ul id="topMenu" class="clearfix">
-			<li data-menuanchor="1st"><a href="#1st">menu1</a></li>
-			<li data-menuanchor="2st"><a href="#2st">menu2</a></li>
-			<li data-menuanchor="3st"><a href="#3st">menu3</a></li>
-			<li data-menuanchor="4st"><a href="#4st">menu4</a></li>
-		</ul>
+		<div class="menuWrap">
+			<div id="logo">
+				<a href="#">
+					<img src="images01/logo.png" alt="">
+				</a>
+			</div>
+			
+			<div class="mi">
+				<ul>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+				</ul>
+			</div>
+			
+			<div class="right01">
+				<div class="one">로그인</div>
+				<div class="two">회원가입</div>
+			</div>
 		</div>
+
 	</nav>
 	<div id="fullpage">
 		<div class="section page" id="page1" data-anchor="1st">
-			<div class="main" id="onView">
-				<h3>Lorem ipsum.</h3>
-				<p>Lorem ipsum dolor sit.</p>
-				<a href="#">more</a>
-			</div>
+
+			
+
 			<div class="scroll">
 				<a href="#1st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
+
+
 		</div>
 
 		<div class="section page" id="page2" data-anchor="2st">
