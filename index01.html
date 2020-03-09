@@ -58,21 +58,30 @@
 		});
 	</script>
 	<style>
-		.menuWrap{width: 1200px; margin: 0 auto; _background-color: #f00;}	
+		.menuWrap{width: 1500px; margin: 0 auto; _background-color: #f00;}	
 		nav#navTop{
-			position: fixed;z-index:1;width:100%;height: 100px;
+			position: fixed;z-index:1;width:100%;height: 120px;
 			background-color: #343436;
 		}
-		#logo{width: 118px;height: 44px; float: left; margin-right: 50px; margin-top: 27px;}
-		.mi{width: 400px;height: 100px;background-color:green; float: left; margin-right: 100px; 
-			color:#fff; font-weight: bold}
-		.right01{width: 500px;height: 100px;background-color: #ff0; float: left;}
+		#logo{width: 118px;height: 44px; float: left; margin-right: 200px; margin-left: 50px;margin-top: 35px;}
+		.mi{width: 750px;height: 120px;_background-color:green; float: left; 
+			margin-right: 50px; 
+			}
+		.mi ul li {float: left; width: 20%; height: 40px;}	
+		.mi ul li a {display: block; line-height:40px;color:#fff; font-weight: bold; margin-top: 10px;
+					font-size: 25px; margin-right: 30px; text-align: center;}
+		.mi ul li a:hover{border-bottom: 3px solid #f00;}			
+		.right01{width: 300px;height: 120px;_background-color: #ff0; float: left;
+				font-size: 15px;}
+		div.mi>ul>li:hover .submenu{display: block;background-color:darkblue;}		
 		.right01 .one, 
 		.right01 .two{float: left; margin-top: 40px;}
 
-		.right01 .one{margin-right: 30px; margin-left: 150px;}
-		.right01 .two{width: 100px;height: 30px; line-height: 30px;background-color: #f0f;
-						text-align: center;
+		.right01 .one{width: 100px;height: 30px; line-height: 30px;
+					text-align: center;  color:#999999;
+					margin-right: 30px; margin-left: 30px; padding-top: 5px;}
+		.right01 .two{width: 100px;height: 40px; line-height: 30px;background-color: #555555;
+					text-align: center; padding-top: 3px; color:#fff; border-radius: 5px;
 		}
 
 		/*#logo{width: 135px;height: 50px;position: absolute;left: 300px;_top: 25px;_background-color: #f00;}
@@ -139,12 +148,49 @@
 			</div>
 			
 			<div class="mi">
-				<ul>
-					<li><a href="#">menu</a></li>
-					<li><a href="#">menu</a></li>
-					<li><a href="#">menu</a></li>
-					<li><a href="#">menu</a></li>
-					<li><a href="#">menu</a></li>
+				<ul class= "clearfix">
+					<li><a href="#">BRAND</a>
+						<ul class="submenu">
+							<li>OUTBACK STORY</li>
+							<li>BEEF STROY</li>
+							<li>STEAK ACADEMY</li>
+							<li>OUTBACK CSR</li>
+							<li>PRESS CENTER</li>
+						</ul>
+					</li>
+					
+					<li><a href="#">MENU</a>
+						<ul class="submenu">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+
+					<li><a href="#">MEMBERSHIP</a>
+						<ul class="submenu">
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+
+					<li><a href="#">BENEFIT</a>
+						<ul class="submenu">
+							<li>OUTBACK STORY</li>
+							<li>BEEF STROY</li>
+							<li>STEAK ACADEMY</li>
+							<li>OUTBACK CSR</li>
+							<li>PRESS CENTER</li>
+						</ul>
+					</li>
+
+					<li><a href="#">STORE</a></li>
+
 				</ul>
 			</div>
 			
@@ -157,28 +203,38 @@
 	</nav>
 	<div id="fullpage">
 		<div class="section page" id="page1" data-anchor="1st">
-
-			
+			<video id="myVideo" autoplay muted data-autoplay>
+				<source src="images/video.mp4">
+			</video>
 
 			<div class="scroll">
-				<a href="#1st"><img src="images/btn_scroll.png" alt=""></a>
+				<a href="#2st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
-
-
 		</div>
 
 		<div class="section page" id="page2" data-anchor="2st">
+			<div class="main" id="onView">
+				<h3>Lorem ipsum.</h3>
+				<p>Lorem ipsum dolor sit.</p>
+				<a href="#">more</a>
+			</div>
+			<div class="scroll">
+				<a href="#3st"><img src="images/btn_scroll.png" alt=""></a>
+			</div>
+		</div>
+
+		<div class="section page" id="page3" data-anchor="3st">
 			<div class="main" id="onView01">
 				<h3>Lorem ipsum.</h3>
 				<p>Lorem ipsum dolor sit.</p>
 				<a href="#">more</a>
 			</div>
 			<div class="scroll">
-				<a href="#2st"><img src="images/btn_scroll.png" alt=""></a>
+				<a href="#4st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
 
-		<div class="section page" id="page3" data-anchor="3st">
+		<div class="section page" id="page4" data-anchor="4st">
 
 			<!-- <style>
 				.slide{position: relative;}
@@ -216,3 +272,5 @@
 	</div>
 </body>
 </html>
+
+
