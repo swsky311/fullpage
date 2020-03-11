@@ -13,8 +13,8 @@
 	<script>
 		$(document).ready(function(){
 			$("#fullpage").fullpage({
-				anchors:["1st","2st","3st","4st"],
-				menu:"#topMenu",
+				anchors:["1st","2st","3st","4st","5st"],
+				menu:".gnbmi",
 				navigation:true,
 				slideNavigation:true,
 				afterLoad:function(anchorslink,index){
@@ -64,20 +64,26 @@
 			background-color: #343436;
 		}
 		#logo{width: 118px;height: 44px; float: left; margin-right: 200px; margin-left: 50px;margin-top: 40px;}
-		.mi{width: 800px;height: 120px;_background-color:green; float: left; 
+
+
+		.mi {width: 800px;height: 120px;float: left; 
 			margin-right: 20px;
 			}
-		.mi ul li {float: left; width: 20%; height: 120px;}	
-		.mi ul li a {display: block;line-height:120px;color:#fff; font-weight: bold; margin-top: 10px;
+		.gnbmi>ul{width: 100%;}
+		.gnbmi>ul>li {float: left; width: 20%; line-height: 120px;
+				position: relative;
+		}	
+		.gnbmi>ul>li>a {display: block;line-height:120px;color:#fff; font-weight: bold; margin-top: 10px;
 					font-size: 22px; margin-right: 10px; text-align: center;}
-		.mi ul li:hover{background-color:skyblue;}
-		.mi ul li:hover a{color: white;border-bottom: 3px solid #f00;}			
+		_.gnbmi>ul>li:nth-child(1)>a{color:red;}
+				
 		
+
 
 		.right01{width: 300px;height: 120px;_background-color: #ff0; float: left;
 				font-size: 15px;}	
 		.right01 .one, 
-		.right01 .two{float: left; margin-top: 40px;}
+		.right01 .two{float: right; margin-top: 40px;}
 
 		.right01 .one{width: 100px;height: 30px; line-height: 30px;
 					text-align: center;  color:#999999;
@@ -86,11 +92,13 @@
 					text-align: center; padding-top: 3px; color:#fff; border-radius: 5px;
 		}
 
-
-		.submenu{display: none;padding-bottom: 10px;}
-		.submenu>li{color:white;text-align: center;line-height:35px;}
+		/* .submenu{display: none;} */
+		.submenu{position: absolute; /* 선이 빠짐  */
+			width: 100%; background-color:#aaa
+		}
+		.submenu>li{width: 100%;}
 		.submenu>li:hover{background-color: #00f;}
-		.mi>ul>li:hover .submenu{display: block; background-color:darkblue;}
+		.mi>ul>li>a{display: block; text-align: center;background-color:0f0;}
 		
 
 		/*#logo{width: 135px;height: 50px;position: absolute;left: 300px;_top: 25px;_background-color: #f00;}
@@ -98,7 +106,7 @@
 		#fullpage{width: 100%; height: 500px; background-color: skyblue;}
 		_#topMenu{width: 300px;height:100px;margin: 0 auto;}
 		nav#navTop li a{display: block;line-height:100px;text-align: center;padding: 0 10px;}
-		#page1{background-image: url(images/bg1.jpg);}
+		#page1{background-image: url(images01/img01.jpg);}
 		#page2{background-image: url(images/bg2.jpg);}
 		#page3{background-image: url(images/bg3.jpg);}
 		#page4{background-image: url(images/bg4.jpg);}
@@ -119,7 +127,8 @@
 			from{bottom: 20px;}
 			to{bottom: 40px;}
 		}
-		_#navTop .active{background-color:skyblue;}
+
+		_.gnbmi ul li .active{color:red;}
 		.main{
 			width: 400px;position: absolute;left: 50%;
 			color:white; transform: translate(-50%,-50%); text-align: center;
@@ -159,59 +168,23 @@
 			<div class="mi">
 				<nav class="gnbmi">
 					<ul class= "clearfix">
-						<li><a href="#">BRAND</a>
-							<ul class="submenu clearfix">
-								<li>OUTBACK STORY</li>
-								<li>BEEF STROY</li>
-								<li>STEAK ACADEMY</li>
-								<li>OUTBACK CSR</li>
-								<li>PRESS CENTER</li>
-							</ul>
-						</li>
-					
-						<li><a href="#">MENU</a>
-							<ul class="submenu clearfix">
-								<li>T-BONE STEAK</li>
-								<li>TOMAHAWK STEAK</li>
-								<li>BLACK LABEL STEAKS</li>
-								<li>OUTBACK STEAK SPECIALS</li>
-								<li>FAVORITES</li>
-								<li>LUNCH SET</li>
-								<li>PASTAS & SALADS</li>
-								<li>DESSERTS & OTHERS</li>
-							</ul>
-						</li>
-
-						<li><a href="#">MEMBERSHIP</a>
-							<ul class="submenu clearfix">
-								<li>MEMBERSHIP BENEFIT</li>
-								<li>BOOMERANK VIP</li>
-							</ul>
-						</li>
-
-						<li><a href="#">BENEFIT</a>
-							<ul class="submenu clearfix">
-								<li>OUTBACK STORY</li>
-								<li>BEEF STROY</li>
-								<li>STEAK ACADEMY</li>
-								<li>OUTBACK CSR</li>
-								<li>PRESS CENTER</li>
-							</ul>
-						</li>
-
-						<li><a href="#">STORE</a></li>
-
+						<li data-menuanchor="1st"><a href="#1st">BRAND</a></li>
+						<li data-menuanchor="2st"><a href="#2st">MENU</a></li>
+						<li data-menuanchor="3st"><a href="#3st">MEMBER</a></li>
+						<li data-menuanchor="4st"><a href="#4st">BENEFIT</a></li>
+						<li data-menuanchor="5st"><a href="#5st">STORE</a></li>
 					<ul>
 				<nav>
 			</div>
 			
-			<div class="right01">
+
+			<div class="right01 clearfix">
 				<div class="one">로그인</div>
 				<div class="two">회원가입</div>
 			</div>
-		</div>
-
 	</nav>
+
+
 	<div id="fullpage">
 		<div class="section page" id="page1" data-anchor="1st">
 			<!-- <video id="myVideo" autoplay muted data-autoplay>
