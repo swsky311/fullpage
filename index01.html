@@ -13,7 +13,7 @@
 	<script>
 		$(document).ready(function(){
 			$("#fullpage").fullpage({
-				anchors:["1st","2st","3st","4st","5st"],
+				anchors:["1st","2st","3st","4st"],
 				menu:".gnbmi",
 				navigation:true,
 				slideNavigation:true,
@@ -70,15 +70,18 @@
 		.mi {width: 800px;height: 120px;float: left; 
 			margin-right: 20px;
 			}
+		.mi>ul>li>a{display: block; text-align: center;background-color:#0f0;}
 		.gnbmi>ul{width: 100%;}
-		.gnbmi>ul>li {float: left; width: 20%; line-height: 120px;
-				position: relative;
-		}	
+		.gnbmi>ul>li {float: left; width: 20%; line-height: 120px;position: relative;}
+		.gnbmi>ul>li.active>a{color:red;}	
 		.gnbmi>ul>li>a {display: block;line-height:120px;color:#fff; font-weight: bold; margin-top: 10px;
 					font-size: 22px; margin-right: 10px; text-align: center;}
+<<<<<<< HEAD
 		_.gnbmi>ul>li:nth-child(1)>a{color:red;}
 		.mi .gnbmi ul li a.active{background-color: #000;color:#f00;}
 				
+=======
+>>>>>>> 0e3a210aeca7662b8389129ded6386e933156012
 		
 
 
@@ -93,6 +96,7 @@
 		.right01 .two{width: 100px;height: 40px; line-height: 30px;background-color: #555555;
 					text-align: center; padding-top: 3px; color:#fff; border-radius: 5px;
 		}
+<<<<<<< HEAD
 
 		/* .submenu{display: none;} */
 		_.submenu{position: absolute; /* 선이 빠짐  */
@@ -101,6 +105,22 @@
 		_.submenu>li{width: 100%;}
 		_.submenu>li:hover{background-color: #00f;}
 		_.mi>ul>li>a{display: block; text-align: center;background-color:#0f0;}
+=======
+		
+		.txt {position: relative;}
+		.txt01>h3{width: 500px;height: 100px; _background-color: #f00;font-size:4em; color:#AD804F;
+				position: absolute; top:20px;left: 230px;
+		}
+		.txt02>p{width: 600px;height: 200px; _background-color: #f00;font-size:5em;color: #fff;
+				position: absolute; top: 120px; left: 180px;
+		}
+		.img01{position: relative;}
+		.img01>img{display: block; float: right; margin-right: 300px; padding-bottom: 100px;}
+
+		
+
+		
+>>>>>>> 0e3a210aeca7662b8389129ded6386e933156012
 		
 
 		/*#logo{width: 135px;height: 50px;position: absolute;left: 300px;_top: 25px;_background-color: #f00;}
@@ -109,9 +129,11 @@
 		_#topMenu{width: 300px;height:100px;margin: 0 auto;}
 		nav#navTop li a{display: block;line-height:100px;text-align: center;padding: 0 10px;}
 		#page1{background-image: url(images01/img01.jpg);}
-		#page2{background-image: url(images/bg2.jpg);}
-		#page3{background-image: url(images/bg3.jpg);}
-		#page4{background-image: url(images/bg4.jpg);}
+		#page2{background-image: url(images01/img02.png);}
+		#page3{background-image: url(images01/img03.png);}
+		#page4{background-image: url(images01/img04.png);}
+		#page5{background-image: url(images01/img04.png);}
+
 		.page{
 			background-repeat: no-repeat;
 			background-position: center;
@@ -170,11 +192,18 @@
 			<div class="mi">
 				<nav class="gnbmi">
 					<ul class= "clearfix">
+<<<<<<< HEAD
 						<li data-menuanchor="1st"><a href="#1st"class="active">BRAND</a></li>
 						<li data-menuanchor="2st"><a href="#2st"class="active">MENU</a></li>
 						<li data-menuanchor="3st"><a href="#3st"class="active">MEMBER</a></li>
 						<li data-menuanchor="4st"><a href="#4st"class="active">BENEFIT</a></li>
 						<li data-menuanchor="5st"><a href="#5st"class="active">STORE</a></li>
+=======
+						<li data-menuanchor="1st"><a href="#1st">BRAND</a></li>
+						<li data-menuanchor="2st"><a href="#2st">MENU</a></li>
+						<li data-menuanchor="3st"><a href="#3st">MEMBER</a></li>
+						<li data-menuanchor="4st"><a href="#4st">STORE</a></li>
+>>>>>>> 0e3a210aeca7662b8389129ded6386e933156012
 					<ul>
 				<nav>
 			</div>
@@ -184,43 +213,42 @@
 				<div class="one">로그인</div>
 				<div class="two">회원가입</div>
 			</div>
+		</div>	
 	</nav>
 
 
 	<div id="fullpage">
 		<div class="section page" id="page1" data-anchor="1st">
-			<!-- <video id="myVideo" autoplay muted data-autoplay>
-				<source src="images/video.mp4">
-			</video> -->
-
+			<div class="txt">
+				<div class="txt01">
+					<h3>◆OUTBACK◆</h3>
+				</div>	
+				<div class="txt02">
+					<p>T-BONE STEAK</p>
+				</div>
+				<div class="img01">
+					<img src="images01/img01_01.png" alt="">
+				</div>	
+			</div>
 			<div class="scroll">
 				<a href="#2st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
 
 		<div class="section page" id="page2" data-anchor="2st">
-			<div class="main" id="onView">
-				<h3>Lorem ipsum.</h3>
-				<p>Lorem ipsum dolor sit.</p>
-				<a href="#">more</a>
-			</div>
 			<div class="scroll">
 				<a href="#3st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
 
 		<div class="section page" id="page3" data-anchor="3st">
-			<div class="main" id="onView01">
-				<h3>Lorem ipsum.</h3>
-				<p>Lorem ipsum dolor sit.</p>
-				<a href="#">more</a>
-			</div>
+			<iframe width="1350" height="700" src="https://www.youtube.com/embed/7dVwlbHvV0Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<div class="scroll">
 				<a href="#4st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
 
-		<div class="section page" id="page4" data-anchor="4st">
+		<!-- <div class="section page" id="page4" data-anchor="4st"> -->
 
 			<!-- <style>
 				.slide{position: relative;}
@@ -245,14 +273,17 @@
 			</div> -->
 
 			<!-- div.sliderWrap>div.slider$*5>lorem50 -->
-			<div class="sliderWrap">
+			<!-- <div class="sliderWrap">
 				<div class="slider1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi numquam debitis expedita fugiat quisquam. Inventore repudiandae obcaecati, nam tenetur natus nihil maiores porro placeat, reiciendis iure eius. Porro similique accusamus dolorem hic distinctio ut eveniet ad ducimus at maiores eligendi ipsam unde, nihil, placeat neque qui, voluptatum quod saepe voluptate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi numquam debitis expedita fugiat quisquam. Inventore repudiandae obcaecati, nam tenetur natus nihil maiores porro placeat, reiciendis iure eius. Porro similique accusamus dolorem hic distinctio ut eveniet ad ducimus at maiores eligendi ipsam unde, nihil, placeat neque qui, voluptatum quod saepe voluptate!</div>
 				<div class="slider1">Reprehenderit autem a quibusdam? Veniam sapiente voluptates voluptatem dignissimos quia a! Beatae nesciunt amet enim culpa nihil, reprehenderit dolores nam vitae, nemo dolorum quam velit, incidunt sed doloremque quidem maiores ullam obcaecati voluptas saepe voluptatum magnam pariatur voluptate harum accusamus optio! Nulla necessitatibus reprehenderit nihil sit voluptate reiciendis, provident numquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi numquam debitis expedita fugiat quisquam. Inventore repudiandae obcaecati, nam tenetur natus nihil maiores porro placeat, reiciendis iure eius. Porro similique accusamus dolorem hic distinctio ut eveniet ad ducimus at maiores eligendi ipsam unde, nihil, placeat neque qui, voluptatum quod saepe voluptate!</div>
 				<div class="slider1">Repellendus, tempora culpa praesentium minima veniam maiores, saepe eos inventore iste dolorem assumenda eligendi deleniti, quam ipsam facilis error neque eum consequatur accusantium repellat quae temporibus! Earum nesciunt laudantium consectetur dolor ducimus repudiandae, praesentium asperiores incidunt soluta inventore adipisci, non reprehenderit quod corrupti temporibus sint molestiae a eum possimus suscipit?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi numquam debitis expedita fugiat quisquam. Inventore repudiandae obcaecati, nam tenetur natus nihil maiores porro placeat, reiciendis iure eius. Porro similique accusamus dolorem hic distinctio ut eveniet ad ducimus at maiores eligendi ipsam unde, nihil, placeat neque qui, voluptatum quod saepe voluptate!</div>
 				<div class="slider1">Eaque nesciunt aliquid sapiente iste dolorem vel alias rerum cupiditate totam aliquam neque, quasi dolore consequatur vero laboriosam aperiam voluptate illum sed esse ab cumque fugit ex eos ipsa minima. Assumenda nobis sit illo eum doloribus, dicta, amet ex laboriosam numquam consectetur omnis sunt laudantium enim soluta obcaecati? Consequatur, maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi numquam debitis expedita fugiat quisquam. Inventore repudiandae obcaecati, nam tenetur natus nihil maiores porro placeat, reiciendis iure eius. Porro similique accusamus dolorem hic distinctio ut eveniet ad ducimus at maiores eligendi ipsam unde, nihil, placeat neque qui, voluptatum quod saepe voluptate!</div>
 				<div class="slider1">Ipsa neque nemo obcaecati mollitia, dolorum a doloribus, asperiores sit modi ab veritatis soluta, tempore itaque ad eveniet cupiditate assumenda culpa? Eos nihil dolorem officia, sunt cupiditate, error sint. Quae dolor at commodi vel deserunt voluptas labore, ut ex molestiae quasi, esse perferendis id. Nam sit tempore amet earum excepturi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi numquam debitis expedita fugiat quisquam. Inventore repudiandae obcaecati, nam tenetur natus nihil maiores porro placeat, reiciendis iure eius. Porro similique accusamus dolorem hic distinctio ut eveniet ad ducimus at maiores eligendi ipsam unde, nihil, placeat neque qui, voluptatum quod saepe voluptate!</div>
 			</div>
-		</div>
-		<div class="section page fp-auto-height" id="page5" data-anchor="5st">
+					</div> -->
+		<div class="section page fp-auto-height" id="page4" data-anchor="4st">
 			<div class="footer" style="height:300px;background-color:skyblue"></div>
 	</div>
+
+	</body>
+</html>
